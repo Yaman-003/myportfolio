@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            cursor: pointer;
+
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .leftbar {
+            width: 15%;
+            background-color: #FFFFFF;
+            color: black;
+        }
+
+
+        .leftbar img {
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0 auto;
+
+        }
+
+        .content {
+            width: 85%;
+            background-color: #FFFBF2;
+        }
+
+        .content .navbar1 {
+            display: flex;
+            gap: 100px;
+        }
+
+        .tab {
+            display: none;
+        }
+
+        .tab:target {
+            display: block;
+        }
+
+        .navbar1 {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tab#portfolio {
+            justify-items: center;
+        }
+        .tab#profile{
+            justify-items: center;
+            align-items: center;
+        }
+        .tab#portfolio img{
+            margin-left: 200px;
+        }
+        .projects-section {
+  padding: 40px;
+ background-color: #FFFBF2;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid  ;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin: 10px 0 5px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+button{
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+        /* Default view */
+        #profile:target~.tab#profile,
+        #portfolio:target~.tab#portfolio {}
+
+        .tab:not(:target):not(#default) {}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img
+                src="https://cdn.prod.website-files.com/65c14454c8e90beca1ee629a/6714b6c7f84bbe3ce6a3762a_Wall%20of%20Portfolios%20Logo.svg"
+                width="150px" alt=""></div>
+        <ul class="nav-links">
+            <li>Portfolio</li>
+            <li>case Studies</li>
+        </ul>
+        <button class="Submit-btn" ondblclick="showsection">Submit</button>
+    </nav>
+    <hr>
+
+    <div class="container">
+        <!-- leftside section -->
+        <div class="leftbar">
+            <img src="./IMG_3108.png" width="150px">
+            <h1>Yaman Shrestha</h1>
+            <p>@yamanshrestha9</p>
+            <p>Ux/ui Designer</p>
+            <br>
+
+            <a href="#profile"> Profile</a><br>
+            <br>
+            <a href="#portfolio">Portfolio</a>
+
+        </div>
+
+
+        <!-- main content -->
+        <div class="content">
+            <nav class="navbar1">
+                <a href="#" target="_blank">Works</a>
+                <a href="#">Experiment</a>
+                <a href="#"><strong>Yaman Shrestha</strong></a>
+                <a href="#">About me</a>
+                <a href="#">Contact</a>
+
+            </nav>
+            <br>
+            <br>
+            <div id="profile" class="tab">
+                <h2>Yaman Shrestha</h2>
+                <p>YamanShrestha •🇳🇵 </p>
+                <p><strong>About:</strong>
+
+
+                    Hi, I’m Yaman Shrestha — a passionate and detail-oriented aspiring UI/UX designer transitioning from
+                    a background in cooperative work to the world of digital design. I’m currently learning HTML, CSS,
+                    and the foundations of user-centered design. I enjoy transforming simple ideas into meaningful user
+                    experiences and am constantly working on sharpening my skills through real-world practice and
+                    creative projects.
+
+                    I’m motivated, quick to learn, and ready to bring clean, user-friendly designs to life</p>
+            </div>
+
+            <div id="portfolio" class="tab">
+                <h2><strong>Welcome to My Portfolio</strong></h2>
+                <img src="https://framerusercontent.com/images/6py1YoXHVQa3wNItE1RHY8j0Fk.png?scale-down-to=1024"
+                    width="500px">
+                    <br>
+
+            </div>
+
+        <section class="projects-section">
+  <h2>My Projects</h2>
+  <div class="project-cards">
+    <div class="project-card">
+      <img src="./IMG_6838.jpg" alt="Project 1">
+      <h3>Project Title 1</h3>
+      <p>This is a short description of Project 1.</p>
+      <a href="./pexel2.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="./IMG_6840.jpg" alt="Project 2">
+      <h3>Project Title 2</h3>
+      <p>This is a short description of Project 2.</p>
+      <a href="./facebook layout.html" target="_blank">View Project</a>
+    </div>
+
+
+  </div>
+</section>
+
+   </div>
+</body>
+
+</html>
