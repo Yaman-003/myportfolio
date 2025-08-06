@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            background-image: url(https://images.pexels.com/photos/4912037/pexels-photo-4912037.jpeg);
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            align-items: center;
+            top: 0;
+            left: 0;
+            padding: 20px 40px;
+            width: 100%;
+
+        }
+
+        .logo {
+            font-family: cursive;
+            font-size: 30px;
+        }
+
+        .menu {
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .menu button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+
+        }
+
+        .join-btn:hover {
+            background-color: blue;
+        }
+
+
+
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            background: white;
+            border-radius: 6px;
+            height: 60px;
+            max-width: 600px;
+            overflow: hidden;
+            margin: 0 auto;
+
+
+        }
+
+        .search-box select,
+        .search-box input,
+        .search-box button {
+            border: none;
+            padding: 13px;
+            font-size: 16px;
+        }
+
+        .search-box input {
+            flex: 1;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    
+
+
+            
+
+        
+        
+        
+
+        .navbar1 {
+            height: 60px;
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+
+
+
+
+        }
+        .navbar2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+.navbar2 button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10%;
+    cursor: pointer;
+
+}
+
+
+        .navbar1 button {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20%;
+            align-items: center;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="banner">
+        <!-- top navigation -->
+
+        <header class="navbar">
+            <div class="logo">pexels</div>
+            <div class="menu">
+                <button class="join-btn" onclick="showsection">join</button>
+            </div>
+        </header>
+        <!-- banner-content -->
+        <div class="banner-content">
+            <h1>The best free stock photos, royalty free images & videos shared by creators.
+
+            </h1>
+            <div class="search-box">
+                <select>
+                    <option>Photos</option>
+                    <option>videos</option>
+                </select>
+                <input class="text" placeholder="Search for free photos">
+                <button>🔎</button>
+            </div>
+        </div>
+    </section>
+    <!-- gallery -->
+
+    <div class="navbar1">
+        <button class="Home-btn">Home</button>
+        <button class="video-btn">video</button>
+        <button class="Leaderboard">Leaderboard</button>
+        <button class="challenges">challenges</button>
+    </div>
+<br>
+<br>
+<div class="navbar2">
+    <h1>Free stock Photos</h1>
+    <button class="Tranding-btn">Trending</button>
+</div>
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1753731683731-1032f9457b02?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" width="300px">
+    <img src="https://images.unsplash.com/photo-1749916884078-e8359b2adcdd?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" width="300px">
+    <img src="https://images.unsplash.com/photo-1751554827598-c96cb294c0e6?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D" width="300px">
+
+</div>
+
+
+</body>
+
+</html>
