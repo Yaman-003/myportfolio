@@ -20,6 +20,7 @@
 
         .nav-links {
             display: flex;
+            flex-wrap: wrap;
             list-style: none;
             gap: 30px;
             cursor: pointer;
@@ -73,71 +74,99 @@
         .tab#portfolio {
             justify-items: center;
         }
-        .tab#profile{
+
+        .tab#profile {
             justify-items: center;
             align-items: center;
         }
-        .tab#portfolio img{
+
+        .tab#portfolio img {
             margin-left: 200px;
         }
+
         .projects-section {
-  padding: 40px;
- background-color: #FFFBF2;
-  text-align: center;
-}
+            padding: 40px;
+            background-color: #FFFBF2;
+            text-align: center;
+        }
 
-.projects-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+        .projects-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
 
-.project-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
+        .project-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
 
-.project-card {
-  background: white;
-  border: 1px solid  ;
-  border-radius: 10px;
-  width: 300px;
-  padding: 20px;
-}
+        .project-card {
+            background: white;
+            border: 1px solid;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+        }
 
-.project-card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
+        .project-card img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
 
-.project-card h3 {
-  margin: 10px 0 5px;
-}
+        .project-card h3 {
+            margin: 10px 0 5px;
+        }
 
-.project-card p {
-  font-size: 14px;
-  color: #444;
-}
+        .project-card p {
+            font-size: 14px;
+            color: #444;
+        }
 
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-button{
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        button {
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+
+        /* Show when link clicked */
+        :target {
+            display: block;
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        :target h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        :target p {
+            font-size: 16px;
+            color: #555;
+        }
+
 
 
         /* Default view */
         #profile:target~.tab#profile,
         #portfolio:target~.tab#portfolio {}
+        #about:target~.tab#about{}
+
+        #contact:target~.tab#contact {}
+
 
         .tab:not(:target):not(#default) {}
     </style>
@@ -154,7 +183,7 @@ button{
         </ul>
         <button class="Submit-btn" ondblclick="showsection">Submit</button>
     </nav>
-    <hr>
+
 
     <div class="container">
         <!-- leftside section -->
@@ -178,10 +207,11 @@ button{
                 <a href="#" target="_blank">Works</a>
                 <a href="#">Experiment</a>
                 <a href="#"><strong>Yaman Shrestha</strong></a>
-                <a href="#">About me</a>
-                <a href="#">Contact</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
 
             </nav>
+
             <br>
             <br>
             <div id="profile" class="tab">
@@ -203,32 +233,62 @@ button{
                 <h2><strong>Welcome to My Portfolio</strong></h2>
                 <img src="https://framerusercontent.com/images/6py1YoXHVQa3wNItE1RHY8j0Fk.png?scale-down-to=1024"
                     width="500px">
-                    <br>
+                <br>
 
             </div>
 
-        <section class="projects-section">
-  <h2>My Projects</h2>
-  <div class="project-cards">
-    <div class="project-card">
-      <img src="images/IMG_6838.jpg" alt="Project 1">
-      <h3>Project Title 1</h3>
-      <p>This is a short description of Project 1.</p>
-      <a href="./pexel-layout / index.html" target="_blank">View Project</a>
-    </div>
 
-    <div class="project-card">
-      <img src="images/IMG_6840.jpg" alt="Project 2">
-      <h3>Project Title 2</h3>
-      <p>This is a short description of Project 2.</p>
-      <a href="./facebook-layout / index.html" target="_blank">View Project</a>
-    </div>
+            <section class="projects-section">
+                <h2>My Projects</h2>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <img src="images/IMG_6838.jpg" alt="Project 1">
+                        <h3>Project Title 1</h3>
+                        <p>This is a short description of Project 1.</p>
+                        <a href="./pexel-layout / index.html" target="_blank">View Project</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/IMG_6840.jpg" alt="Project 2">
+                        <h3>Project Title 2</h3>
+                        <p>This is a short description of Project 2.</p>
+                        <a href="./facebook-layout / index.html" target="_blank">View Project</a>
+                    </div>
 
 
-  </div>
-</section>
+                </div>
+            </section>
 
-   </div>
+
+
+            <div id="contact" class="tab">
+                <h2>Contact Me</h2>
+                <p>If you'd like to collaborate or just say hello, feel free to reach out!</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:uyamanstha123@gmail.com">uyamanstha123@gmail.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/yaman-003">github.com/yaman-003</a></p>
+                </div>
+
+                </div>
+                                <div id="about" class="tab">
+                    <p>Hi, I’m Yaman Shrestha — a passionate and detail-oriented aspiring UI/UX designer transitioning
+                        from a background in cooperative work to the world of digital design. I’m currently learning
+                        HTML, CSS, and the foundations of user-centered design. I enjoy transforming simple ideas into
+                        meaningful user experiences and am constantly working on sharpening my skills through real-world
+                        practice and creative projects. I’m motivated, quick to learn, and ready to bring clean,
+                        user-friendly designs to life
+
+                    </p>
+
+
+
+
+
+
+
+            </div>
+
+
 </body>
 
 </html>
